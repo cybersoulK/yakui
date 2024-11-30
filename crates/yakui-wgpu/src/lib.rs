@@ -432,13 +432,13 @@ fn make_main_pipeline(
         layout: Some(layout),
         vertex: wgpu::VertexState {
             module: &main_shader,
-            entry_point: "vs_main",
+            entry_point: None,
             compilation_options: Default::default(),
             buffers: &[Vertex::DESCRIPTOR],
         },
         fragment: Some(wgpu::FragmentState {
             module: &main_shader,
-            entry_point: "fs_main",
+            entry_point: None,
             compilation_options: Default::default(),
             targets: &[Some(wgpu::ColorTargetState {
                 format,
@@ -481,13 +481,13 @@ fn make_text_pipeline(
         layout: Some(layout),
         vertex: wgpu::VertexState {
             module: &text_shader,
-            entry_point: "vs_main",
+            entry_point: None,
             compilation_options: Default::default(),
             buffers: &[Vertex::DESCRIPTOR],
         },
         fragment: Some(wgpu::FragmentState {
             module: &text_shader,
-            entry_point: "fs_main",
+            entry_point: None,
             compilation_options: Default::default(),
             targets: &[Some(wgpu::ColorTargetState {
                 format,
